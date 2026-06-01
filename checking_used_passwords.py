@@ -25,9 +25,9 @@ def check_password_uniqueness(bloom: BloomFilter, passwords: List[str]) -> dict:
     results = {}
     for password in passwords:
         if bloom.contains(password):
-            results[password] = f"Non-unique"
+            results[password] = f"вже використаний"
         else:
-            results[password] = f"Unique"
+            results[password] = f"унікальний"
     return results
 
 
